@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>sowers sports circle｜徳島の社会人スポーツサークル</title>
+<meta name="description" content="徳島で活動する社会人スポーツサークル。ワンコイン500円・月額無料・道具不要・1人参加歓迎！バドミントン・バレー・バスケ・バク転などに気軽に参加できます。登録者数1,000名突破！" />
+<meta property="og:title" content="sowers sports circle" />
+<meta property="og:description" content="徳島の社会人スポーツサークル。ワンコイン500円で好きなスポーツに参加。登録者数1,000名突破！" />
+<meta property="og:image" content="https://cdn.peraichi.com/userData/5b3e181c-c4bc-4b30-8f41-0f8f0a00002b/img/622ae25f4398b/original.jpeg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#2fe39a; --pink:#ff5ea3; --orange:#ffb13d;
+    --bg:#0f141a; --bg2:#141b23; --card:#1a232d; --card2:#202b37; --line:#2b3742;
+    --text:#eef3f7; --muted:#9aa8b4;
+    --round:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--text);background:var(--bg);
+    line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;word-break:auto-phrase;line-break:strict}
+  .dsp{font-family:"Outfit",sans-serif}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:min(1120px,92%);margin-inline:auto}
+  .center{text-align:center}
+  section{position:relative}
+  .eyebrow{font-family:"Outfit",sans-serif;font-weight:800;letter-spacing:.22em;font-size:.78rem;text-transform:uppercase}
+  .grad-text{background:linear-gradient(90deg,var(--green),var(--orange) 55%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .h2{font-size:clamp(1.7rem,5vw,2.5rem);font-weight:900;line-height:1.4;margin:12px 0 10px}
+  .lead{color:var(--muted);font-size:1rem;margin-bottom:8px}
+
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:1rem;padding:15px 28px;border-radius:999px;
+    color:#0f141a;background:linear-gradient(120deg,var(--green),#6cf2bf);box-shadow:0 0 0 1px rgba(47,227,154,.4),0 14px 34px rgba(47,227,154,.28);
+    transition:transform .15s ease, box-shadow .15s ease;border:0;cursor:pointer}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.pink{background:linear-gradient(120deg,var(--pink),#ff8cc0);color:#1a0a13;box-shadow:0 0 0 1px rgba(255,94,163,.4),0 14px 34px rgba(255,94,163,.28)}
+  .btn.ghost{background:transparent;color:var(--text);border:1.5px solid rgba(255,255,255,.3);box-shadow:none}
+
+  /* header */
+  header{position:sticky;top:0;z-index:60;background:rgba(15,20,26,.72);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:13px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-family:"Outfit";font-weight:800;font-size:1.05rem}
+  .logo{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-size:1.15rem;
+    background:conic-gradient(from 210deg,var(--green),var(--orange),var(--pink),var(--green))}
+  .nav-links{display:flex;gap:22px;align-items:center}
+  .nav-links a{font-weight:500;color:var(--muted);font-size:.93rem}
+  .nav-links a:hover{color:var(--text)}
+  .nav .btn{padding:9px 18px;font-size:.85rem}
+  @media(max-width:880px){.nav-links a:not(.btn){display:none}}
+
+  /* hero */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden}
+  .hero .bgimg{position:absolute;inset:0;z-index:0}
+  .hero .bgimg img{width:100%;height:100%;object-fit:cover}
+  .hero .ov{position:absolute;inset:0;z-index:1;
+    background:linear-gradient(110deg,rgba(15,20,26,.96) 0%,rgba(15,20,26,.82) 45%,rgba(15,20,26,.55) 100%)}
+  .hero .glow{position:absolute;z-index:1;border-radius:50%;filter:blur(70px);opacity:.5}
+  .g-green{width:360px;height:360px;background:var(--green);top:-80px;left:-60px;opacity:.28}
+  .g-pink{width:340px;height:340px;background:var(--pink);bottom:-100px;right:6%;opacity:.26}
+  .hero .inner{position:relative;z-index:2;padding:90px 0}
+  .stat-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(47,227,154,.12);border:1px solid rgba(47,227,154,.4);
+    color:var(--green);padding:8px 18px;border-radius:999px;font-weight:700;font-size:.92rem}
+  .hero h1{font-size:clamp(2.2rem,6.4vw,4rem);font-weight:900;line-height:1.28;margin:18px 0 0}
+  .hero p.sub{max-width:560px;margin:18px 0 0;color:#d4dde4;font-size:1.06rem}
+  .pills{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 30px}
+  .pill{background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:700;font-size:.86rem;display:flex;gap:7px;align-items:center}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px}
+
+  /* stats band */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:-44px;position:relative;z-index:5}
+  @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .stat{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:var(--round);padding:22px 18px;text-align:center}
+  .stat .n{font-family:"Outfit";font-weight:800;font-size:2rem;line-height:1}
+  .stat .l{color:var(--muted);font-size:.84rem;margin-top:6px;font-weight:500}
+
+  .sec{padding:74px 0}
+  .alt{background:var(--bg2)}
+
+  /* split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  @media(max-width:840px){.split{grid-template-columns:1fr;gap:26px}}
+  .media{border-radius:var(--round);overflow:hidden;aspect-ratio:4/3;border:1px solid var(--line);background:var(--card)}
+  .media img{width:100%;height:100%;object-fit:cover}
+
+  /* sport cards */
+  .grid{display:grid;gap:20px}
+  .g2{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.g4,.g2{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--round);overflow:hidden;transition:transform .15s ease, border-color .15s}
+  .card:hover{transform:translateY(-4px);border-color:rgba(47,227,154,.4)}
+  .card .ph{aspect-ratio:16/11;overflow:hidden;position:relative}
+  .card .ph img{width:100%;height:100%;object-fit:cover}
+  .card .ico{position:absolute;top:12px;left:12px;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:1.5rem;background:rgba(15,20,26,.7);backdrop-filter:blur(6px);border:1px solid var(--line)}
+  .card .b{padding:18px 20px 22px}
+  .card h3{font-size:1.12rem;font-weight:900;margin-bottom:6px}
+  .card p{color:var(--muted);font-size:.9rem}
+  .card .venue{display:block;margin-top:10px;color:var(--green);font-size:.8rem;font-weight:700}
+  .footnote{color:var(--muted);font-size:.86rem;margin-top:22px;text-align:center;border:1px dashed var(--line);border-radius:14px;padding:12px 16px}
+
+  /* steps with images */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:st}
+  @media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.steps{grid-template-columns:1fr}}
+  .stepc{background:var(--card);border:1px solid var(--line);border-radius:var(--round);overflow:hidden;position:relative}
+  .stepc .ph{aspect-ratio:16/11;overflow:hidden}
+  .stepc .ph img{width:100%;height:100%;object-fit:cover}
+  .stepc .num{counter-increment:st;position:absolute;top:12px;left:12px;width:42px;height:42px;border-radius:50%;
+    display:grid;place-items:center;font-family:"Outfit";font-weight:800;font-size:1.2rem;color:#0f141a;
+    background:linear-gradient(135deg,var(--green),var(--orange))}
+  .stepc .num::before{content:"STEP " counter(st);position:absolute;white-space:nowrap;left:50px;font-family:"Noto Sans JP";font-weight:900;font-size:.62rem;color:var(--green)}
+  .stepc .b{padding:30px 18px 20px}
+  .stepc h3{font-size:1rem;font-weight:900;margin-bottom:4px}
+  .stepc p{color:var(--muted);font-size:.86rem}
+
+  /* extras list */
+  .ex{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:820px){.ex{grid-template-columns:1fr}}
+  .exc{background:var(--card);border:1px solid var(--line);border-radius:var(--round);padding:24px}
+  .exc .e{font-size:2rem}
+  .exc h3{font-size:1.08rem;font-weight:900;margin:8px 0 6px}
+  .exc p{color:var(--muted);font-size:.9rem}
+
+  /* qa */
+  .qa{max-width:820px;margin:0 auto;display:grid;gap:12px}
+  details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:2px 20px}
+  summary{list-style:none;cursor:pointer;padding:16px 0;font-weight:700;display:flex;gap:12px;align-items:flex-start}
+  summary::-webkit-details-marker{display:none}
+  summary .q{flex:none;width:26px;height:26px;border-radius:8px;background:var(--pink);color:#1a0a13;display:grid;place-items:center;font-family:"Outfit";font-weight:800;font-size:.85rem}
+  details p{color:var(--muted);padding:0 0 18px 38px;font-size:.92rem}
+  details[open] summary .q{background:var(--green);color:#0f141a}
+
+  /* instructor */
+  .inst{display:grid;grid-template-columns:260px 1fr;gap:30px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--round);overflow:hidden}
+  .inst .pic{aspect-ratio:1;height:100%}.inst .pic img{width:100%;height:100%;object-fit:cover}
+  .inst .b{padding:28px 30px}.inst h3{font-size:1.4rem;font-weight:900}.inst .role{color:var(--green);font-weight:700;margin-bottom:10px}
+  .inst ul{list-style:none;color:var(--muted);font-size:.9rem;margin:0}
+  .inst li{padding-left:22px;position:relative}.inst li::before{content:"▸";position:absolute;left:0;color:var(--orange)}
+  @media(max-width:740px){.inst{grid-template-columns:1fr}.inst .pic{aspect-ratio:16/10}}
+
+  /* CTA */
+  .ctablock{background:radial-gradient(120% 140% at 0% 0%, rgba(47,227,154,.18), transparent 50%),radial-gradient(120% 140% at 100% 100%, rgba(255,94,163,.2), transparent 50%),var(--bg2);
+    border:1px solid var(--line);border-radius:28px;padding:54px 28px;text-align:center}
+  .ctablock h2{font-size:clamp(1.7rem,5.5vw,2.5rem);font-weight:900;margin-bottom:10px}
+  .ctablock p{color:var(--muted);margin-bottom:24px}
+  .ctablock .cta-row{justify-content:center}
+
+  /* related */
+  .rel{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media(max-width:760px){.rel{grid-template-columns:1fr}}
+
+  footer{border-top:1px solid var(--line);padding:44px 0 30px;margin-top:20px}
+  footer .gf{display:flex;flex-wrap:wrap;gap:26px;justify-content:space-between}
+  footer .brand{font-family:"Outfit";font-weight:800}
+  .fc{color:var(--muted);font-weight:500;line-height:2}
+  .fc a:hover{color:var(--green)}
+  .copy{margin-top:22px;font-size:.8rem;color:#6b7884;border-top:1px solid var(--line);padding-top:16px}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease, transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="logo">🔥</span>sowers sports circle</div>
+    <nav class="nav-links">
+      <a href="#about">サークルとは</a>
+      <a href="#sports">スポーツ</a>
+      <a href="#join">参加方法</a>
+      <a href="#qa">Q&amp;A</a>
+      <a class="btn" href="https://lin.ee/7DRW3Dg" target="_blank" rel="noopener">参加する</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="bgimg"><img src="https://cdn.peraichi.com/userData/5b3e181c-c4bc-4b30-8f41-0f8f0a00002b/img/622ae25f4398b/original.jpeg" alt="sowers sports circle"></div>
+  <div class="ov"></div>
+  <span class="glow g-green"></span><span class="glow g-pink"></span>
+  <div class="wrap inner">
+    <span class="stat-badge">🎉 登録者数 1,000名突破！</span>
+    <h1>空いた時間に、<br><span class="grad-text">好きなスポーツ</span>を。</h1>
+    <p class="sub">徳島の社会人スポーツサークル。参加義務なし・道具不要・1人参加大歓迎。ワンコインで、いろんなスポーツに気軽に参加できます。</p>
+    <div class="pills">
+      <span class="pill">💰 1回ワンコイン500円</span>
+      <span class="pill">🆓 月額・年会費 無料</span>
+      <span class="pill">🎒 道具不要</span>
+      <span class="pill">🙋 1人参加歓迎</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn" href="https://lin.ee/7DRW3Dg" target="_blank" rel="noopener">📱 LINEでサークルに参加</a>
+      <a class="btn ghost" href="#about">どんなサークル？</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="wrap">
+  <div class="stats">
+    <div class="stat reveal"><div class="n grad-text">1,000<span style="font-size:1rem">名</span></div><div class="l">登録者数 突破</div></div>
+    <div class="stat reveal"><div class="n grad-text">¥500</div><div class="l">1回ワンコイン</div></div>
+    <div class="stat reveal"><div class="n grad-text">20-40<span style="font-size:1rem">代</span></div><div class="l">中心の年齢層</div></div>
+    <div class="stat reveal"><div class="n grad-text">5<span style="font-size:1rem">+</span></div><div class="l">種目のスポーツ</div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="sec">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow grad-text">ABOUT</span>
+      <h2 class="h2">「何かスポーツを始めたい」を、<br>気軽にかなえる。</h2>
+      <p class="lead">仕事が忙しくて毎回は通えない。道具を揃えても続くか不安。途中から入ると浮きそう…。そんな理由で一歩踏み出せない方のためのサークルです。</p>
+      <p class="lead">参加義務はなし。必要な道具はすべて用意。LINEのオープンチャットで匿名参加もOK。いろんなスポーツに挑戦して、長く続けられる「自分のスポーツ」を見つけませんか？</p>
+    </div>
+    <div class="media reveal"><img loading="lazy" src="https://cdn.peraichi.com/userData/5b3e181c-c4bc-4b30-8f41-0f8f0a00002b/img/622ae2261f8b9/original.jpeg" alt="活動の様子"></div>
+  </div>
+</section>
+
+<!-- SPORTS -->
+<section id="sports" class="sec alt center">
+  <div class="wrap">
+    <span class="eyebrow grad-text">SPORTS</span>
+    <h2 class="h2">楽しめるスポーツ</h2>
+    <p class="lead">未経験者がほとんど。基礎から教えるので安心して参加できます。</p>
+    <div class="grid g4" style="text-align:left;margin-top:18px">
+      <div class="card reveal"><div class="ph"><img loading="lazy" src="https://cdn.peraichi.com/userData/5b3e181c-c4bc-4b30-8f41-0f8f0a00002b/img/622adeac7bac2/original.jpeg" alt="バドミントン"><span class="ico">🏸</span></div><div class="b"><h3>バドミントン</h3><p>持ち方・スイングから。ダブルス中心にたくさん試合！</p><span class="venue">北島町民体育館 / 市立スポーツセンター / 論田B&G</span></div></div>
+      <div class="card reveal"><div class="ph"><img loading="lazy" src="https://cdn.peraichi.com/userData/5b3e181c-c4bc-4b30-8f41-0f8f0a00002b/img/622ade1cdb43d/original.jpeg" alt="バレーボール"><span class="ico">🏐</span></div><div class="b"><h3>バレーボール</h3><p>レシーブ・トスの基本から。勝ちより楽しさ重視のゲーム。</p><span class="venue">市立体育館 / 北島YGKドーム</span></div></div>
+      <div class="card reveal"><div class="ph"><img loading="lazy" src="https://cdn.peraichi.com/userData/5b3e181c-c4bc-4b30-8f41-0f8f0a00002b/img/6010dce6c8bf1/original.jpeg" alt="バスケットボール"><span class="ico">🏀</span></div><div class="b"><h3>バスケットボール</h3><p>ドリブル・パスを中心に。チームを組んでゲームも楽しめます。</p><span class="venue">市立体育館 ほか</span></div></div>
+      <div class="card reveal"><div class="ph"><img loading="lazy" src="https://cdn.peraichi.com/userData/5b3e181c-c4bc-4b30-8f41-0f8f0a00002b/img/61c169ffe3000/original.jpeg" alt="アクロバット・バク転"><span class="ico">🤸</span></div><div class="b"><h3>アクロバット / バク転</h3><p>バク転の練習は毎回実施。月替わりで色んな技にも挑戦！</p><span class="venue">市立体育館 / 論田B&G武道館</span></div></div>
+    </div>
+    <p class="footnote">＋ 卓球・ボルダリング・バブルボールなどの体験会も不定期で開催！　※フットサルは現在不定期開催です。</p>
+  </div>
+</section>
+
+<!-- JOIN STEPS -->
+<section id="join" class="sec center">
+  <div class="wrap">
+    <span class="eyebrow grad-text">HOW TO JOIN</span>
+    <h2 class="h2">参加方法はかんたん4ステップ</h2>
+    <p class="lead">面倒な手続きなし。気になった練習にLINEから参加するだけ！</p>
+    <div class="steps" style="text-align:left;margin-top:20px">
+      <div class="stepc reveal"><div class="ph"><img loading="lazy" src="https://cdn.peraichi.com/userData/5b3e181c-c4bc-4b30-8f41-0f8f0a00002b/img/622adf85e823e/original.jpeg" alt=""><span class="num">1</span></div><div class="b"><h3>LINEに参加</h3><p>オープンチャットに参加。匿名で名前を設定でき、個人LINEは公開されません。</p></div></div>
+      <div class="stepc reveal"><div class="ph"><img loading="lazy" src="https://cdn.peraichi.com/userData/5b3e181c-c4bc-4b30-8f41-0f8f0a00002b/img/622ae2261f8b9/original.jpeg" alt=""><span class="num">2</span></div><div class="b"><h3>練習日に「参加」</h3><p>気になるスポーツ・日程に「参加」を押すだけ。参加義務はありません。</p></div></div>
+      <div class="stepc reveal"><div class="ph"><img loading="lazy" src="https://cdn.peraichi.com/userData/5b3e181c-c4bc-4b30-8f41-0f8f0a00002b/img/622adeac7bac2/original.jpeg" alt=""><span class="num">3</span></div><div class="b"><h3>会場へ（ワンコイン）</h3><p>当日ワンコイン500円を持って会場へ。ラケット等の備品はこちらで用意します。</p></div></div>
+      <div class="stepc reveal"><div class="ph"><img loading="lazy" src="https://cdn.peraichi.com/userData/5b3e181c-c4bc-4b30-8f41-0f8f0a00002b/img/622ade1cdb43d/original.jpeg" alt=""><span class="num">4</span></div><div class="b"><h3>あとは楽しむ！</h3><p>動きやすい服・室内シューズ・飲み物を持って、思いきり体を動かそう！</p></div></div>
+    </div>
+    <div style="margin-top:30px"><a class="btn" href="https://lin.ee/7DRW3Dg" target="_blank" rel="noopener">📱 LINEで参加する</a></div>
+  </div>
+</section>
+
+<!-- EXTRAS -->
+<section class="sec alt center">
+  <div class="wrap">
+    <span class="eyebrow grad-text">MORE FUN</span>
+    <h2 class="h2">スポーツ以外も楽しい！</h2>
+    <div class="ex" style="text-align:left;margin-top:18px">
+      <div class="exc reveal"><div class="e">🎲</div><h3>いろんなスポーツ体験</h3><p>卓球・ボルダリング・バブルボールなど不定期で開催。やりたい競技の提案も大歓迎！</p></div>
+      <div class="exc reveal"><div class="e">🎄</div><h3>季節のイベント</h3><p>季節にちなんだイベントやスキー旅行など、1年を楽しくするイベントを企画。参加は自由！</p></div>
+      <div class="exc reveal"><div class="e">🗳️</div><h3>sowers総選挙</h3><p>3ヶ月に1度、集まった参加費の使い道をみんなの投票で決定。一緒にサークルを育てよう。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- QA -->
+<section id="qa" class="sec center">
+  <div class="wrap">
+    <span class="eyebrow grad-text">Q&amp;A</span>
+    <h2 class="h2">よくある質問</h2>
+    <div style="height:14px"></div>
+    <div class="qa" style="text-align:left">
+      <details class="reveal"><summary><span class="q">Q</span>小学生でも参加できますか？</summary><p>当クラブは中学生以上が対象です。ただし、バク転については経験者であれば小学生も参加できます。</p></details>
+      <details class="reveal"><summary><span class="q">Q</span>個人のLINEは公開されますか？</summary><p>いいえ。匿名で参加できるLINEオープンチャットを使用しているため、名前を自由に設定でき、個人は特定されません。</p></details>
+      <details class="reveal"><summary><span class="q">Q</span>年会費・入会金・月会費は必要？</summary><p>どれも必要ありません。特別なイベントを除き、すべてワンコイン500円で参加いただけます。</p></details>
+      <details class="reveal"><summary><span class="q">Q</span>年齢層はどれくらい？</summary><p>20代〜40代の方が多く参加しています。</p></details>
+      <details class="reveal"><summary><span class="q">Q</span>道具は何が必要？</summary><p>動きやすい服と室内シューズ、飲み物をご持参ください。競技に必要な備品（ラケット等）はこちらで準備します。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTOR -->
+<section class="sec alt">
+  <div class="wrap center"><span class="eyebrow grad-text">REPRESENTATIVE</span><h2 class="h2">代表あいさつ</h2></div>
+  <div class="wrap" style="margin-top:10px">
+    <div class="inst reveal">
+      <div class="pic"><img loading="lazy" src="https://cdn.peraichi.com/userData/5b3e181c-c4bc-4b30-8f41-0f8f0a00002b/img/629f77e16bb1e/original.jpeg" alt="代表 ケイタ"></div>
+      <div class="b">
+        <h3>ケイタ</h3>
+        <div class="role">sowers group 代表 / アクロバット担当</div>
+        <p style="color:var(--muted);font-size:.92rem;margin-bottom:14px">徳島の皆さんが、空いた時間に気軽にスポーツを楽しめる場所をつくりたい——そんな思いで sowers sports circle を運営しています。1人参加でも大丈夫。まずは気軽にのぞいてみてください！</p>
+        <ul>
+          <li>男子新体操 全国国民体育大会 入賞</li>
+          <li>「笑ってコラえて」男子新体操の旅 出演</li>
+          <li>徳島ヴォルティス専属チア「BLUE SPIRITS」アクロバットコーチ</li>
+        </ul>
+        <div style="margin-top:16px"><a class="btn pink" href="https://www.instagram.com/sowers.circle" target="_blank" rel="noopener">📷 サークルのInstagram</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="ctablock reveal">
+      <span class="stat-badge">🎉 登録者数 1,000名突破！</span>
+      <h2 style="margin-top:14px">まずは1回、遊びにきてください。</h2>
+      <p>入会金・年会費なし。気軽に参加できます。</p>
+      <div class="cta-row">
+        <a class="btn" href="https://lin.ee/7DRW3Dg" target="_blank" rel="noopener">📱 LINEでサークルに参加</a>
+        <a class="btn ghost" href="mailto:sowers.toku@gmail.com">✉️ メールで問い合わせ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="sec alt">
+  <div class="wrap center"><span class="eyebrow grad-text">SOWERS GROUP</span><h2 class="h2">子ども向けの教室もあります</h2></div>
+  <div class="wrap rel" style="margin-top:10px">
+    <div class="card reveal"><div class="ph" style="aspect-ratio:16/9"><img loading="lazy" src="https://cdn.peraichi.com/userData/5b3e181c-c4bc-4b30-8f41-0f8f0a00002b/img/606c0ccf9f190/original.jpeg" alt="徳島タンブ体操教室"></div><div class="b"><h3>徳島タンブ体操教室</h3><p>エアトラックマットを使った幼稚園・小学生向けの体操教室。<br><a href="https://tumb-taisou-hp.vercel.app/" target="_blank" rel="noopener" style="color:var(--green);font-weight:700">体操教室HPへ →</a></p></div></div>
+    <div class="card reveal"><div class="ph" style="aspect-ratio:16/9"><img loading="lazy" src="https://cdn.peraichi.com/userData/5b3e181c-c4bc-4b30-8f41-0f8f0a00002b/img/5e76e59f181c6/original.jpeg" alt="sowers sports club"></div><div class="b"><h3>sowers sports club</h3><p>月額2,000円で約10種類のスポーツが通い放題。小学生対象のクラブ。<br><a href="https://sowers-club-hp.vercel.app/" target="_blank" rel="noopener" style="color:var(--green);font-weight:700">クラブHPへ →</a></p></div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap gf">
+    <div>
+      <div class="brand" style="display:flex;align-items:center;gap:10px;font-size:1.05rem"><span class="logo">🔥</span>sowers sports circle</div>
+      <p style="margin-top:12px;max-width:380px;color:var(--muted);font-size:.92rem">徳島で活動する社会人スポーツサークル。空いた時間に、好きなスポーツを。</p>
+    </div>
+    <div class="fc">
+      <strong style="color:var(--text)">お問い合わせ</strong><br>
+      <a href="https://lin.ee/7DRW3Dg" target="_blank" rel="noopener">📱 LINEで参加</a><br>
+      <a href="mailto:sowers.toku@gmail.com">✉️ sowers.toku@gmail.com</a><br>
+      <a href="https://www.instagram.com/sowers.circle" target="_blank" rel="noopener">📷 Instagram</a>
+    </div>
+  </div>
+  <div class="wrap copy">© 2026 sowers sports circle</div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
